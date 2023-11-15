@@ -7,17 +7,25 @@ except:
 def libraries():
     """
     Import libraries. Takes no arguments and returns None
+    
+    WIP: CURRENTLY NOT WORKING!
     """
     import pandas as pd
     import numpy as np
     import matplotlib.pyplot as plt
     import seaborn as sns
     import env
-    
     from scipy import stats
     from pydataset import data
     
-    return None
+    # Add the imported modules to the global scope
+    # globals()['pd'] = pd
+    globals()['np'] = np
+    globals()['plt'] = plt
+    globals()['sns'] = sns
+    globals()['env'] = env
+    # globals()
+
     
 
 def get_db_url(db_name,user=env.user,password=env.password,host=env.host):
